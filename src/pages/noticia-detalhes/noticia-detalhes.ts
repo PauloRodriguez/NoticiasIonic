@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Noticia } from '../model/noticia';
+import { NOTICIA } from '../config/api.config';
 
 /**
- * Generated class for the CategoriasPage page.
+ * Generated class for the NoticiaDetalhesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +12,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-categorias',
-  templateUrl: 'categorias.html',
+  selector: 'page-noticia-detalhes',
+  templateUrl: 'noticia-detalhes.html',
 })
-export class CategoriasPage {
+export class NoticiaDetalhesPage {
+
+  noticia : Noticia[] = NOTICIA;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CategoriasPage');
+    console.log('ionViewDidLoad NoticiaDetalhesPage');
   }
 
 }
